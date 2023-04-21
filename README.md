@@ -1,6 +1,6 @@
 # [Squoosh]!
 
-[Squoosh] is an image compression web app that reduces image sizes through numerous formats.
+[Squoosh] is an image compression web app that reduces image sizes through numerous formats. This is a fork of latest version of the CLI before it was removed from the main repository.
 
 # API & CLI
 
