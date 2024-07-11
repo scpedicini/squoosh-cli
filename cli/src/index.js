@@ -185,7 +185,10 @@ async function processFiles(files) {
           program.opts().suffix,
       );
       for (const output of Object.values(image.encodedWith)) {
-        const outputFile = `${outputPath}.${(await output).extension}`;
+        let outputFile = `${outputPath}.${(await output).extension}`;
+        if(program.opts().outputFile) {
+          outputFile = program.opts().outputFile;
+        }
         await fsp.writeFile(outputFile, (await output).binary);
         results
           .get(image)
@@ -207,6 +210,7 @@ async function processFiles(files) {
 program
   .name('squoosh-cli')
   .arguments('<files...>')
+  .option('-o, --output-file <file>', 'Absolute output file name and path (only use with a single file)', '')
   .option('-d, --output-dir <dir>', 'Output directory', '.')
   .option('-s, --suffix <suffix>', 'Append suffix to output files', '')
   .option(

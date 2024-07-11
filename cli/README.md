@@ -1,8 +1,4 @@
-# Project no longer maintained
-
-Unfortunately, due to a few people leaving the team, and staffing issues resulting from the current economic climate (ugh), this package is no longer actively maintained. I know that sucks, but there simply isn't the time & people to work on this. If anyone from the community wants to fork it, you have my blessing. The [squoosh.app](https://squoosh.app) will continue to be supported and improved.
-
-# Squoosh CLI
+# Squoosh CLI (Custom version for Obsidian to Pelican Export Tool)
 
 Squoosh CLI is an _experimental_ way to run all the codecs you know from the [Squoosh] web app on your command line using WebAssembly. The Squoosh CLI uses a worker pool to parallelize processing images. This way you can apply the same codec to many images at once.
 
@@ -32,6 +28,7 @@ Options:
   -V, --version                                          output the version number
   -d, --output-dir <dir>                                 Output directory (default: ".")
   -s, --suffix <suffix>                                  Append suffix to output files (default: "")
+  --output-file <file>                                   Output file (intended for a single input file *only*)
   --max-optimizer-rounds <rounds>                        Maximum number of compressions to use for auto optimizations (default: "6")
   --optimizer-butteraugli-target <butteraugli distance>  Target Butteraugli distance for auto optimizer (default: "1.4")
   --resize [config]                                      Resize the image before compressing
